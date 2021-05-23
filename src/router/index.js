@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MovieIndex from '../pages/movie/index.vue';
 import MovieShow from '../pages/movie/show.vue';
 import TvIndex from '../pages/tv/index.vue';
-
+import TvShow from '../pages/tv/show.vue';
 
 const routes = [
   {
@@ -20,7 +20,13 @@ const routes = [
     path: '/tv',
     name: 'tv-index',
     component: TvIndex
-  }
+  },
+  {
+    path: '/tv/:id',
+    name: 'tv-show',
+    component: TvShow,
+    props: true
+  },
 ]
 
 const router = createRouter({

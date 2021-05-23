@@ -14,7 +14,9 @@
             <span>{{ movie['release_date'] }}</span>
         </div>
         <div class="text-gray-400 text-sm">
-            {{ movie['genres'] }}
+            <span v-for="id in movie['genre_ids']" :key="id">
+              
+            </span>
         </div>
     </div>
   </div>
@@ -25,6 +27,7 @@
 export default {
   props: {
     movie: Object,
+    genres: Array
   },
 }
 </script>

@@ -37,7 +37,7 @@ const actions = {
   },
   async fetchGenres({commit}) {
     const res = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${key}`);
-    commit('setGenres', res.data.results);
+    commit('setGenres', res.data.genres);
   },
   async fetchMovie({commit}, id) {
     const res = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${key}&append_to_response=credits,videos,images`);

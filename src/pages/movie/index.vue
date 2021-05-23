@@ -1,5 +1,5 @@
 <template>
-  <div style="background-image: url('https://source.unsplash.com/random/2500x2000); object-fit: cover" class="py-16 px-8 text-white">
+  <div style="background-image: url('https://images.unsplash.com/photo-1535016120720-40c646be5580?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'); object-fit: cover" class="py-16 px-8 text-white">
     <p class="text-5xl font-bold">Welcome.</p>
     <p class="text-3xl mb-8">Millions of movies, TV shows and people to discover. Explore now.</p>
     <input type="text" placeholder="Search for a movie, tv show, person..." class="max-w-7xl w-full py-4 px-8 rounded-full text-black">
@@ -10,7 +10,7 @@
             Popular Movies
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
-            <MovieCard v-for="movie in popularMovies" :key="movie.id" :movie="movie"/>
+            <MovieCard v-for="movie in popularMovies" :key="movie.id" :movie="movie" :genres="genres"/>
         </div>
     </div>
 
@@ -23,7 +23,7 @@
             <MovieCard v-for="movie in nowPlayingMovies" :key="movie.id" :movie="movie"/>
         </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
