@@ -45,7 +45,6 @@ export default {
     this.fetchPopularMovies();
     this.fetchNowPlayingMovies();
     this.fetchGenres();
-    console.log(process.env.VUE_APP_MODE);
   }
 }
 </script>
